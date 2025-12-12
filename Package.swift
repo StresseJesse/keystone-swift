@@ -10,11 +10,11 @@ let package = Package(
             targets: ["Keystone"]),
     ],
     targets: [
-        .target(
-            name: "CKeystone",
-            path: "Sources/CKeystone",
-            publicHeadersPath: "include"
-        ),
+//        .target(
+//            name: "CKeystone",
+//            path: "Sources/CKeystone",
+//            publicHeadersPath: "include"
+//        ),
         
         .binaryTarget(
             name: "KeystoneFramework",
@@ -23,7 +23,7 @@ let package = Package(
 
         .target(
             name: "Keystone",
-            dependencies: ["CKeystone", "KeystoneFramework"] // Links headers & the framework
+            dependencies: [/*"CKeystone", */"KeystoneFramework"] // Links headers & the framework
         ),
         
         // 4. The Test Target
