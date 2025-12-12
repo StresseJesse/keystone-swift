@@ -1,0 +1,48 @@
+// Sources/CKeystone/include/module.modulemap
+
+module CKeystone {
+    // Export the main header's contents
+    header "keystone.h"
+    export *
+    
+    // Explicitly define submodules for all architecture headers
+    module arm {
+        header "arm.h"
+        export *
+    }
+    module arm64 {
+        header "arm64.h"
+        export *
+    }
+    module evm {
+        header "evm.h"
+        export *
+    }
+    module hexagon {
+        header "hexagon.h"
+        export *
+    }
+    module mips {
+        header "mips.h"
+        export *
+    }
+    module ppc {
+        header "ppc.h"
+        export *
+    }
+    module sparc {
+        header "sparc.h"
+        export *
+    }
+    module systemz {
+        header "systemz.h"
+        export *
+    }
+    module x86 {
+        header "x86.h"
+        export *
+    }
+    
+    // Link the library
+    link "keystone"
+}
