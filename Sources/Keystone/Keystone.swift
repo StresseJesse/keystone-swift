@@ -25,7 +25,6 @@ public class Keystone {
             self.engine = engine
             self.arch = arch
             self.mode = mode
-            print("Keystone engine initialized successfully.")
         } else {
             // ... error handling ...
             print("Failed to initialize Keystone engine.")
@@ -68,7 +67,6 @@ public class Keystone {
 
         // ks_asm returns 0 on success, -1 on failure
         if result == 0, let encodingPtr = encoding {
-            print("Assembly success: \(statementCount) statement(s) assembled.")
             
             // Create a Swift Array from the C pointer and size
             let byteArray = Array(UnsafeBufferPointer(start: encodingPtr, count: encodingSize))
