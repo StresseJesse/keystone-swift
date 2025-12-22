@@ -2,7 +2,7 @@
 import XCTest
 import Foundation
 import Keystone
-import CKeystone
+//import CKeystone
 //@testable import keystone-swift
 
 final class KeystoneTests: XCTestCase {

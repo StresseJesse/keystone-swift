@@ -17,13 +17,13 @@ let package = Package(
 //        ),
         
         .binaryTarget(
-            name: "KeystoneFramework",
+            name: "CKeystone",
             path: "Sources/CKeystone/libkeystone.xcframework"
         ),
 
         .target(
             name: "Keystone",
-            dependencies: [/*"CKeystone", */"KeystoneFramework"] // Links headers & the framework
+            dependencies: ["CKeystone"] // Links headers & the framework
         ),
         
         // 4. The Test Target

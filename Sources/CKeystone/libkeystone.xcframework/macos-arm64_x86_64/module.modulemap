@@ -1,0 +1,5 @@
+module CKeystone [system] { // Adding [system] helps with search path priorities
+    umbrella "keystone"      // Points to your keystone/ directory
+    export *
+    link "keystone"         // This must match the name of libkeystone.a (minus lib/extension)
+}
