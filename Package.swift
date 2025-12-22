@@ -1,9 +1,9 @@
-// swift-tools-version:6.0
+// swift-tools-version:6.2
 import PackageDescription
 
 let package = Package(
     name: "keystone-swift",
-    platforms: [.macOS(.v14)],
+    platforms: [.macOS(.v26)],
     products: [
         .library(
             name: "Keystone",
@@ -23,7 +23,10 @@ let package = Package(
 
         .target(
             name: "Keystone",
-            dependencies: ["CKeystone"] // Links headers & the framework
+            dependencies: ["CKeystone"],// Links headers & the framework
+            linkerSettings: [
+                .linkedLibrary("c++")
+            ]
         ),
         
         // 4. The Test Target
